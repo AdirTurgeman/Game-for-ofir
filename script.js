@@ -47,10 +47,10 @@ block.addEventListener('animationiteration', () =>
     let left = random * 100;
     block.style.left = left +"px";
     counter ++;
-    if ((counter % 5) == 0)
+    if ((counter % 15) == 0)
         {
             speedCounter ++;
-            if (speedCounter < 7)
+            if (speedCounter < 8)
             {
                 changeSpeed();
             }

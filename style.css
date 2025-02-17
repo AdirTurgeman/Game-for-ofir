@@ -27,7 +27,7 @@
     background-color:black;
     top: 0;
     position: relative;
-    animation: slide 1.8s infinite linear;
+    animation: slide 1.2s infinite linear;
 }
 
 @keyframes slide{
