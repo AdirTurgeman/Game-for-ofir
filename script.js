@@ -8,7 +8,7 @@ function changeSpeed(){
     block.style.animation = "none"
     setTimeout(()=>{
         block.style.animation = `slide ${speed}s infinite linear`;
-    }, 5);
+    }, 1);
 }
 
 changeSpeed();
@@ -62,6 +62,8 @@ block.addEventListener('animationiteration', () =>
         {
            differentSize();
         }
+
+
 }
 );
 
@@ -89,10 +91,19 @@ setInterval (function(){
         var block = document.getElementById("block");
         block.addEventListener('animationiteration', () =>
             {
-                var random =Math.floor(Math.random() *3);
+                var random =Math.floor(Math.random() *5);
+                if(random < 3)
+                {
                 let height = (random+1) * 100;
                 block.style.height = height +"px";
                 udpadteHeight(height);
+                }
+                else
+                {
+                    let height = 100;
+                    block.style.height = height +"px";
+                    udpadteHeight(height);
+                }
             });
     }
 
@@ -106,4 +117,5 @@ setInterval (function(){
         return blockHeight;
 
     }
+
 
