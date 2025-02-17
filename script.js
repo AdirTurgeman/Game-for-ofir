@@ -1,5 +1,6 @@
 let speed = 1.2;
 let speedCounter = 0;
+let blockHeight = 100;
 
 function changeSpeed(){
     speed -= 0.1;
@@ -41,6 +42,7 @@ document.addEventListener("keydown" ,event=>
 
 var block = document.getElementById("block");
 var counter = 0;
+
 block.addEventListener('animationiteration', () =>
 {
     var random = Math.floor(Math.random()*3);
@@ -54,6 +56,11 @@ block.addEventListener('animationiteration', () =>
             {
                 changeSpeed();
             }
+        }
+
+        if (counter >20)
+        {
+           differentSize();
         }
 }
 );
@@ -69,10 +76,34 @@ setInterval (function(){
     var blockTop = parseInt(window
     .getComputedStyle(block).getPropertyValue("top"));
     
-    if(characterLeft == blockLeft && blockTop <500 && blockTop>300)
+    if(characterLeft == blockLeft && blockTop <500 && blockTop + getHeight() >400)
     {
         alert("Game Over! Score: "+ counter);
         block.style.animation = "none";
     }
 
     },50);
+
+    function differentSize()
+    {
+        var block = document.getElementById("block");
+        block.addEventListener('animationiteration', () =>
+            {
+                var random =Math.floor(Math.random() *3);
+                let height = (random+1) * 100;
+                block.style.height = height +"px";
+                udpadteHeight(height);
+            });
+    }
+
+    function udpadteHeight(height)
+    {
+    
+        blockHeight = height;
+    }
+
+    function getHeight(){
+        return blockHeight;
+
+    }
+
