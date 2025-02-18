@@ -22,7 +22,7 @@
     left: 100px;
 }
 
-#block
+#block, #block2
 {
     width: 100px;
     height:100px;
@@ -53,22 +53,5 @@
 }
 
 #startButton:hover {
-    background-color: blue;
-}
-
-/*
-#restartButton{
-    display: block;
-    margin: 40px auto;
-    padding: 15px 25px;
-    font-size:25px;
-    cursor:pointer;
-    background-color: rgb(59, 62, 186);
-    color:white;
-    border:black;
-    border-radius:3px;
-}
-
-#restartButton:hover{
     background-color: blue;
 }
