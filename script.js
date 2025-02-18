@@ -1,7 +1,7 @@
 let speed = 1.2;
 let speedCounter = 0;
 let blockHeight = 100;
-let counter =0;
+let counter = 0;
 
 
 document.getElementById("startButton").addEventListener("click",function(){
@@ -104,6 +104,7 @@ setInterval (function(){
     {
         alert("Game Over! Score: "+ counter);
         block.style.animation = "none";
+        startGame();
     }
 
     },50);
