@@ -4,6 +4,7 @@
 }
 
 #game {
+    display: none;
     width: 300px;
     height: 600px;
     border:1px solid black;
@@ -35,4 +36,39 @@
     0%{top:-100px;}
     100%{top:500px;}
 
+}
+
+#startButton{
+    display: block;
+    position:relative;
+    margin: 40px auto;
+    padding: 15px 25px;
+    font-size:25px;
+    cursor:pointer;
+    background-color: rgb(59, 62, 186);
+    color:white;
+    border:black;
+    border-radius:3px;
+    
+}
+
+#startButton:hover {
+    background-color: blue;
+}
+
+/*
+#restartButton{
+    display: block;
+    margin: 40px auto;
+    padding: 15px 25px;
+    font-size:25px;
+    cursor:pointer;
+    background-color: rgb(59, 62, 186);
+    color:white;
+    border:black;
+    border-radius:3px;
+}
+
+#restartButton:hover{
+    background-color: blue;
 }

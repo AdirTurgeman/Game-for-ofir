@@ -1,6 +1,28 @@
 let speed = 1.2;
 let speedCounter = 0;
 let blockHeight = 100;
+let counter =0;
+
+
+document.getElementById("startButton").addEventListener("click",function(){
+    document.getElementById("game").style.display = "block";
+    document.getElementById("startButton").style.display = "none";
+    startGame();
+});
+
+
+function startGame()
+{
+    counter = 0;
+    speedCounter = 0;
+    speed = 1.2;
+    blockHeight = 100;
+    changeSpeed();
+}
+
+
+
+
 
 function changeSpeed(){
     speed -= 0.1;
@@ -11,7 +33,7 @@ function changeSpeed(){
     }, 1);
 }
 
-changeSpeed();
+
 
 function moveLeft()
 {
@@ -41,7 +63,7 @@ document.addEventListener("keydown" ,event=>
 })
 
 var block = document.getElementById("block");
-var counter = 0;
+
 
 block.addEventListener('animationiteration', () =>
 {
